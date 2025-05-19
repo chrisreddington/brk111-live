@@ -103,7 +103,3 @@ We're making this game in a 30 minute live session, so I need your responses to 
    - Include alternative control schemes
    - Provide visual and audio cues
    - Support different screen sizes and orientations
-
-## Testing requirements
-
-1. We're not going to write any tests for now (as we're incredibly tight on time), but please maintain a markdown file called `tests/README.md` that outlines the tests that should be created for each component and functionality. Write them as if they were GitHub Issues.
