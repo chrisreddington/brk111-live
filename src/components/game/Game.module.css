@@ -1,0 +1,113 @@
+/* GitHub theme colors (contribution graph) */
+:root {
+  --github-green-very-light: #9be9a8;
+  --github-green-light: #40c463;
+  --github-green-medium: #30a14e;
+  --github-green-dark: #216e39;
+  --github-black: #24292e;
+}
+
+.gameArea {
+  width: 400px;
+  height: 500px;
+  border: 2px solid var(--github-green-dark);
+  position: relative;
+  background-color: #f6f8fa; /* GitHub background color */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.player {
+  width: 30px;
+  height: 30px;
+  background-color: var(--github-green-medium);
+  position: absolute;
+  border-radius: 15%;
+  transition: transform 0.1s;
+}
+
+.car {
+  position: absolute;
+  background-color: var(--github-green-dark);
+  border-radius: 4px;
+}
+
+.log {
+  position: absolute;
+  background-color: var(--github-green-light);
+  border-radius: 4px;
+}
+
+.road {
+  position: absolute;
+  background-color: #e1e4e8; /* GitHub light grey */
+  width: 100%;
+}
+
+.river {
+  position: absolute;
+  background-color: #dbedff; /* GitHub pale blue */
+  width: 100%;
+}
+
+.goalArea {
+  position: absolute;
+  background-color: var(--github-green-very-light);
+  width: 100%;
+  top: 0;
+  height: 40px;
+}
+
+.scoreBoard {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--github-black);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.gameOver {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 100;
+}
+
+.gameOver h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.gameOver button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: var(--github-green-medium);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gameOver button:hover {
+  background-color: var(--github-green-dark);
+}
+
+@media (max-width: 500px) {
+  .gameArea {
+    width: 320px;
+    height: 400px;
+  }
+}
