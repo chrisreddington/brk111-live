@@ -1,11 +1,56 @@
-# React + TypeScript + Vite
+# GitHub-themed Frogger Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun implementation of the classic Frogger game with a GitHub theme built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## How to Play
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Use arrow keys or WASD to move the character
+- Navigate from the bottom to the top of the screen
+- Avoid cars on the road
+- Cross the river by jumping on logs
+- Reach the top to win!
+
+## Features
+
+- GitHub-themed colors (based on contribution graph)
+- Responsive design for desktop and mobile
+- Increasing difficulty as you level up
+- Game loop managed with requestAnimationFrame
+
+## Development
+
+This project was built using React + TypeScript + Vite.
+
+### Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Run linting
+npm run lint
+```
+
+### Project Structure
+
+- `src/`: Source code directory
+  - `components/`: Reusable React components
+    - `components/game/`: Game-specific components (Player, Car, Log, etc.)
+    - `components/ui/`: UI components (Score, GameOver, etc.)
+  - `hooks/`: Custom React hooks
+    - `useGameLoop.ts`: Game loop management
+    - `useControls.ts`: Player controls
+    - `useCollision.ts`: Collision detection
+  - `utils/`: Utility functions
+    - `physics.ts`: Physics calculations
+    - `random.ts`: Random generation utilities
+  - `types/`: TypeScript type definitions
 
 ## Expanding the ESLint configuration
 
@@ -27,28 +72,6 @@ export default tseslint.config({
       project: ['./tsconfig.node.json', './tsconfig.app.json'],
       tsconfigRootDir: import.meta.dirname,
     },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
   },
 })
 ```
